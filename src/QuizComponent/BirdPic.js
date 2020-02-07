@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import Pic from '../assets/images/no-bird.jpg';
+import Pic from '../assets/images/bird.jpg';
 
 class BirdPic extends Component {
   render() {

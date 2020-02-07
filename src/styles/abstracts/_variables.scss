@@ -1,16 +1,26 @@
-$font-1: "Roboto", sans-serif;
+// Fonts
+$font: "Roboto", Arial, sans-serif;
 $primary-fsz: 0.875rem; //14px
 $fsz-1: 1rem;
-$fsz-2: 1.25rem;
-$width-1: 1440px;
-$width-2: 1050px;
-$width-3: 860px;
-$root-color: #222222;
-$second-color: #eceb9e;
-$third-color: #e3b873;
-$forth-color: #4d4848;
-$fifth-color: #959595;
-$none: none;
+$fsz-2: 1.2rem;
+$fsz-3: 2rem;
+
+// Breakpoints
+$wide: 1200px;
+$large: 1024px;
+$normal: 960px;
+$medium: 768px;
+$small: 460px;
+$tiny: 375px;
+
+// Position
 $pos-rel: relative;
 $pos-a: absolute;
-$autom: 0 auto;
+
+// Colors
+$root: #222222;
+$block: #303030;
+$item: #808080;
+$map: #009b76;
+$active: #00bc8c;
+$white: #ffffff;
