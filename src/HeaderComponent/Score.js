@@ -9,9 +9,9 @@ class Score extends Component {
 
   render() {
     return (
-      <div className="score">
-        <span className="score__text">Score:</span>
-        <span className="score__value">{this.state.score.value}</span>
+      <div className="header__score">
+        <span className="header__score-text">Score: </span>
+        <span className="header__score-value">{this.state.score.value}</span>
       </div>
     );
   }
