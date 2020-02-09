@@ -20,7 +20,14 @@ const Header = props => {
       </div>
       <div className="header__game-map">
         {props.BirdsData.map(({ name, id }) => (
-          <div key={id} className="header__game-item">
+          <div
+            key={id}
+            className={
+              props.currentStep + 1 === id
+                ? 'header__game-item active'
+                : 'header__game-item'
+            }
+          >
             {name}
           </div>
         ))}
