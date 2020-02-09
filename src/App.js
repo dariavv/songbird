@@ -30,44 +30,46 @@ const App = () => {
   };
 
   return (
-    <div className="wrapper">
+    <>
       {theEnd ? (
         <TheEnd />
       ) : (
-          <div>
-            <Header
-              BirdsData={BirdsData}
-              score={score}
-              currentStep={currentStep}
-            />
-            <Quiz currentBird={currentBird} state={state} />
-            <div className="game">
-              <Options
-                BirdsDataItem={BirdsData[currentStep]}
-                currentBird={currentBird}
-                setState={setState}
-                state={state}
-                setScore={setScore}
+          <div className="wrapper">
+            <div>
+              <Header
+                BirdsData={BirdsData}
                 score={score}
-                setTempBird={setTempBird}
+                currentStep={currentStep}
               />
-              <GameInfo
-                currentBird={currentBird}
-                tempBird={tempBird}
-                state={state}
-              />
+              <Quiz currentBird={currentBird} state={state} />
+              <div className="game">
+                <Options
+                  BirdsDataItem={BirdsData[currentStep]}
+                  currentBird={currentBird}
+                  setState={setState}
+                  state={state}
+                  setScore={setScore}
+                  score={score}
+                  setTempBird={setTempBird}
+                />
+                <GameInfo
+                  currentBird={currentBird}
+                  tempBird={tempBird}
+                  state={state}
+                />
+              </div>
+              <button
+                type="button"
+                onClick={goNextLevel}
+                className="btn"
+                disabled={state}
+              >
+                Next Level
+            </button>
             </div>
-            <button
-              type="button"
-              onClick={goNextLevel}
-              className="btn"
-              disabled={state}
-            >
-              Next Level
-          </button>
           </div>
         )}
-    </div>
+    </>
   );
 };
 
