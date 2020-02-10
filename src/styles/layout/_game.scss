@@ -1,12 +1,10 @@
 .game {
   display: flex;
-  // flex-wrap: wrap;
   justify-content: space-between;
   @media screen and (max-width: $medium) {
     flex-direction: column;
   }
 }
-
 .game__options {
   display: flex;
   flex: 1;
@@ -17,21 +15,19 @@
   background-color: $block;
   outline: 1px solid $item;
 }
-
 .game__options-item {
   display: flex;
   justify-content: center;
   width: 100%;
   padding: 15px 0;
   background-color: $block;
+  border: none;
   outline: 1px solid $item;
 }
-
 .game__options-item:hover {
   background-color: $item;
   cursor: pointer;
 }
-
 .game__info {
   display: flex;
   flex: 1;
@@ -43,7 +39,6 @@
   background-color: $block;
   outline: 1px solid $item;
 }
-
 .none {
   display: none;
 }

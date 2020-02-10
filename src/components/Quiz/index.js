@@ -7,14 +7,14 @@ const Quiz = props => {
   return (
     <div className="quiz">
       <img
-        src={!props.state ? props.currentBird.image : Pic}
+        src={props.state ? Pic : props.currentBird.image}
         className="bird-pic"
         alt="bird"
         width="200"
         height="150"
       />
       <span className="bird-name">
-        {!props.state ? props.currentBird.name : '******'}
+        {props.state ? '******' : props.currentBird.name}
       </span>
       <AudioPlayer
         autoPlayAfterSrcChange={false}

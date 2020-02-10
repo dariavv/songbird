@@ -23,6 +23,7 @@ const App = () => {
     if (currentStep < BirdsData.length - 1) {
       setCurrentStep(currentStep + 1);
       setCurrentBird(randomBird(BirdsData[currentStep + 1].birds));
+
     } else {
       setTheEnd(true);
     }
@@ -30,17 +31,17 @@ const App = () => {
   };
 
   return (
-    <>
-      {theEnd ? (
-        <TheEnd />
-      ) : (
-          <div className="wrapper">
-            <div>
-              <Header
-                BirdsData={BirdsData}
-                score={score}
-                currentStep={currentStep}
-              />
+    <div className="wrapper">
+      <div>
+        <Header
+          BirdsData={BirdsData}
+          score={score}
+          currentStep={currentStep}
+        />
+        {theEnd ? (
+          <TheEnd />
+        ) : (
+            <>
               <Quiz currentBird={currentBird} state={state} />
               <div className="game">
                 <Options
@@ -61,15 +62,16 @@ const App = () => {
               <button
                 type="button"
                 onClick={goNextLevel}
-                className="btn"
+                className={state ? 'btn' : 'btn-active'}
                 disabled={state}
               >
                 Next Level
             </button>
-            </div>
-          </div>
-        )}
-    </>
+            </>
+          )
+        }
+      </div>
+    </div>
   );
 };
 

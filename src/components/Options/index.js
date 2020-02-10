@@ -13,13 +13,13 @@ const Options = props => {
     if (props.state) {
       props.setTempBird(item);
       if (+item.id !== +props.currentBird.id) {
-        e.target.style.backgroundColor = 'red';
+        e.target.style.backgroundColor = '#F64B4B';
         playSound(Wrong);
         if (scoreResult > 0) {
           scoreResult -= 1;
         }
       } else {
-        e.target.style.backgroundColor = 'green';
+        e.target.style.backgroundColor = '#00bc8c';
         playSound(Success);
         props.setState(false);
         props.setScore(props.score + scoreResult);
@@ -31,14 +31,15 @@ const Options = props => {
   return (
     <div className="game__options">
       {props.BirdsDataItem.birds.map(item => (
-        <div
+        <button
+          type="button"
+          className="game__options-item"
           key={item.id}
           id={item.id}
           onClick={e => clickAction(item, e)}
-          className="game__options-item"
         >
           {item.name}
-        </div>
+        </button>
       ))}
     </div>
   );
