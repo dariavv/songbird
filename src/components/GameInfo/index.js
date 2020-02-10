@@ -1,6 +1,5 @@
 import React from 'react';
 import AudioPlayer from 'react-h5-audio-player';
-import Voice from '../../assets/audio/test.mp3';
 import Pic from '../../assets/images/bird.jpg';
 import 'react-h5-audio-player/src/styles.scss';
 
@@ -24,7 +23,7 @@ const GameInfo = ({ tempBird }) => {
         {tempBird ? tempBird.species : 'Latin Name'}
       </span>
       <AudioPlayer
-        src={tempBird ? tempBird.audio : Voice}
+        src={tempBird.audio}
         autoPlayAfterSrcChange={false}
         className={tempBird ? '' : 'none'}
       />

@@ -25,7 +25,8 @@ const Options = ({ state, setState, setTempBird, currentBird, score, setScore, B
         setScore(score + scoreResult);
         scoreResult = 5;
       }
-      console.log('TCL: clickAction -> scoreResult', scoreResult);
+    } else {
+      setTempBird(item);
     }
   };
   return (
