@@ -14,10 +14,11 @@ const App = () => {
   const [currentBird, setCurrentBird] = useState(
     randomBird(BirdsData[currentStep].birds)
   );
+  console.log("TCL: App -> currentBird", currentBird)
   const [state, setState] = useState(true);
   const [tempBird, setTempBird] = useState('');
   const [theEnd, setTheEnd] = useState(false);
-  console.log('TCL: App -> tempBird', tempBird);
+  // console.log('TCL: App -> tempBird', tempBird);
 
   const goNextLevel = () => {
     if (currentStep < BirdsData.length - 1) {
@@ -39,7 +40,7 @@ const App = () => {
           currentStep={currentStep}
         />
         {theEnd ? (
-          <TheEnd />
+          <TheEnd score={score} />
         ) : (
             <>
               <Quiz currentBird={currentBird} state={state} />
