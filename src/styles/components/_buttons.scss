@@ -18,6 +18,10 @@
   cursor: pointer;
 }
 
+.btn-active:hover {
+  background-color: $map;
+}
+
 .the-end__btn-congrats,
 .the-end__btn-certificate {
   width: 80%;
@@ -30,5 +34,5 @@
 
 .the-end__btn-congrats:hover,
 .the-end__btn-certificate:hover {
-   background-color: $map;
+  background-color: $map;
 }

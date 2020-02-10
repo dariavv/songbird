@@ -14,7 +14,7 @@ const GameInfo = props => {
         width="200"
         height="150"
       />
-      <span className={props.tempBird ? 'bird-name' : 'none'}>
+      <span className={props.tempBird ? 'game__info-name' : 'none'}>
         {props.tempBird ? props.tempBird.name : '******'}
       </span>
       <span className={props.tempBird ? 'none' : 'game__info-default'}>
