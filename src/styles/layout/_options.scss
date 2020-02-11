@@ -23,4 +23,5 @@
 .game__options-item:hover {
   background-color: $item;
   cursor: pointer;
+  transition: all 200ms ease;
 }
