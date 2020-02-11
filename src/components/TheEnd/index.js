@@ -9,7 +9,7 @@ const TheEnd = ({ score }) => {
     <div className="the-end">
       <p className="the-end__congrats">Поздравляем!</p>
       <p className="the-end__result">
-        Вы прошли викторину и набрали {score} из 30 возможных баллов
+        Вы прошли квиз и набрали {score} из 30 возможных баллов
       </p>
       <button
         type="button"

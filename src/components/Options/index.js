@@ -13,13 +13,13 @@ const Options = ({ state, setState, setTempBird, currentBird, score, setScore, B
     if (state) {
       setTempBird(item);
       if (+item.id !== +currentBird.id) {
-        e.target.style.backgroundColor = '#F64B4B';
+        e.target.style.backgroundColor = '#8D0033';
         playSound(Wrong);
         if (scoreResult > 0) {
           scoreResult -= 1;
         }
       } else {
-        e.target.style.backgroundColor = '#00bc8c';
+        e.target.style.backgroundColor = '#22b8cf';
         playSound(Success);
         setState(false);
         setScore(score + scoreResult);

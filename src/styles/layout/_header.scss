@@ -5,7 +5,7 @@
   align-items: center;
   padding: 30px 20px 10px;
   @media screen and (max-width: $tiny) {
-    padding: 20px 10px;
+    padding: 20px 15px 7px;
   }
 }
 .header__score {
@@ -24,7 +24,9 @@
   width: 200px;
   height: 40px;
   background-color: $map;
+  cursor: default;
   @media screen and (max-width: $small) {
+    width: 90%;
     height: 30px;
   }
 }

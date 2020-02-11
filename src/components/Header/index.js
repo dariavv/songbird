@@ -1,5 +1,5 @@
 import React from 'react';
-import Logo from '../../assets/images/logo.svg';
+import Logo from '../../assets/images/logo.png';
 
 const Header = ({ score, BirdsData, currentStep }) => {
   return (

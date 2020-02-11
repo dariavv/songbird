@@ -17,14 +17,15 @@ const GameInfo = ({ tempBird }) => {
         {tempBird ? tempBird.name : '******'}
       </span>
       <span className={tempBird ? 'none' : 'game__info-default'}>
-        Послушайте плеер. Выберите птицу из списка
+        Послушайте плеер и выберите птицу из списка :)
       </span>
-      <span className={tempBird ? 'game__info-name' : 'none'}>
+      <span className={tempBird ? 'game__info-name latin' : 'none'}>
         {tempBird ? tempBird.species : 'Latin Name'}
       </span>
       <AudioPlayer
         src={tempBird.audio}
         autoPlayAfterSrcChange={false}
+        showJumpControls={false}
         className={tempBird ? '' : 'none'}
       />
       <p className={tempBird ? 'game__info-description' : 'none'}>

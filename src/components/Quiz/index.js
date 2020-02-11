@@ -18,6 +18,7 @@ const Quiz = ({ state, currentBird }) => {
       </span>
       <AudioPlayer
         autoPlayAfterSrcChange={false}
+        showJumpControls={false}
         src={currentBird.audio}
       />
     </div>
