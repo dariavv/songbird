@@ -14,6 +14,7 @@ const App = () => {
   const [currentBird, setCurrentBird] = useState(
     randomBird(BirdsData[currentStep].birds)
   );
+  console.log(`Правильный ответ: ${currentBird.name}`);
   const [state, setState] = useState(true);
   const [tempBird, setTempBird] = useState('');
   const [theEnd, setTheEnd] = useState(false);
